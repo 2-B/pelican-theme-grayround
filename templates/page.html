@@ -10,6 +10,8 @@
 	{{ page.content }}
 {% endblock %}
 
+{% if page.modified %}
 {% block footer_date %}
-				<div class="col-md-4"><p class="text-muted">Last edited {{ page.date }}</p></div>
+				<div class="col-md-4"><p class="text-muted">Last edited {{ page.locale_modified }}</p></div>
 {% endblock footer_date %}
+{% endif %}
