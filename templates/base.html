@@ -105,8 +105,15 @@
 		<footer>
 			<div class="row">
 				{% block footer %}
-				{% block footer_date %}<div class="col-md-4"></div>{% endblock footer_date %}
-				<div class="col-md-8"></div>
+				{% block footer_left %}
+				<div class="col-md-4"></div>
+				{% endblock footer_left %}
+				{% block footer_middle %}
+				<div class="col-md-4"></div>
+				{% endblock footer_middle %}
+				{% block footer_right %}
+				<div class="col-md-4"></div>
+				{% endblock footer_right %}
 				{% endblock footer %}
 			</div>
 		</footer><!-- /#contentinfo -->
