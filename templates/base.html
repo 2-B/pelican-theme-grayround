@@ -97,19 +97,30 @@
 			</div><!--/.container-fluid -->
 		</div>
 
-		{% block content %}
-		{% endblock %}
+		<section id="content" class="body">
+			<header>
+				{% block content_title %}
+				{% endblock %}
+			</header>
+			{% block content %}
+			{% endblock %}
+		</section>
 
 		<hr />
-
 		<footer>
 			<div class="row">
 				{% block footer %}
 				{% block footer_left %}
-				<div class="col-md-4"></div>
+				<div class="col-md-4">
+					<a href="/categories.html">Categories</a><br />
+					<a href="/tags.html">Tags</a><br />
+				</div>
 				{% endblock footer_left %}
 				{% block footer_middle %}
-				<div class="col-md-4"></div>
+				<div class="col-md-4">
+					<a href="/authors.html">Authors</a><br />
+					<a href="/archives.html">Archives</a><br />
+				</div>
 				{% endblock footer_middle %}
 				{% block footer_right %}
 				<div class="col-md-4"></div>
