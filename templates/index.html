@@ -5,17 +5,14 @@
 {% block content %}
 {% if articles %}
 	{% for article in articles_page.object_list %}
-		<article class="hentry">
-			<header>
-				<h1><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h1>
-			</header>
+			<article class="hentry">
+				<h2><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
 
-			<div class="entry-content">
-			{{ article.summary }}
-			<a class="readmore" href="{{ SITEURL }}/{{ article.url }}">read more</a>
-			{% if false %}{% include 'comments.html' %}{% endif %}
-			</div><!-- /.entry-content -->
-		</article>
+				<div class="entry-content">
+					{{ article.summary }}
+					<a class="readmore" href="{{ SITEURL }}/{{ article.url }}">read more</a>
+				</div><!-- /.entry-content -->
+			</article>
 	{% endfor %}
 {% else %}
 <section id="content" class="body">
