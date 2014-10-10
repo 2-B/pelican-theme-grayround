@@ -112,12 +112,18 @@
 				{% block footer %}
 				{% block footer_left %}
 				<div class="col-md-4">
-					<a href="/categories.html">Categories</a><br />
-					<a href="/tags.html">Tags</a><br />
+					{% if page and page.modified %}
+					<p class="text-muted">Last edited {{ page.locale_modified }}</p>
+					{% endif %}
+					{% if article and article.modified %}
+					<p class="text-muted">Last edited {{ article.locale_modified }}</p>
+					{% endif %}
 				</div>
 				{% endblock footer_left %}
 				{% block footer_middle %}
 				<div class="col-md-4">
+					<a href="/categories.html">Categories</a><br />
+					<a href="/tags.html">Tags</a><br />
 					<a href="/authors.html">Authors</a><br />
 					<a href="/archives.html">Archives</a><br />
 				</div>
