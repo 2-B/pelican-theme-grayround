@@ -8,9 +8,11 @@
 		<h1 class="entry-title">Authors on {{ SITENAME }}</h1>
 	</header>
 	<div class="entry-content">
-		{%- for author, articles in authors|sort %}
-		<li><a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a> ({{ articles|count }})</li>
-		{% endfor %}
+		<ul>
+			{%- for author, articles in authors|sort %}
+			<li><a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a> ({{ articles|count }})</li>
+			{% endfor %}
+		</ul>
 	</div><!-- /.entry-content -->
 </section>
 {% endblock content %}

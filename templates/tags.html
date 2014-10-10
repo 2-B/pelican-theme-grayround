@@ -8,9 +8,11 @@
 		<h1>Tags for {{ SITENAME }}</h1>
 	</header>
 	<div class="entry-content">
-		{%- for tag, articles in tags|sort %}
-		<li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a> ({{ articles|count }})</li>
-		{% endfor %}
+		<ul>
+			{%- for tag, articles in tags|sort %}
+			<li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a> ({{ articles|count }})</li>
+			{% endfor %}
+		</ul>
 	</div><!-- /.entry-content -->
 </section>
 {% endblock %}
